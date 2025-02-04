@@ -24,3 +24,29 @@ document.addEventListener("DOMContentLoaded", () => {
     setupToggle(btMostrar1, btOcultar1, detInfo1);
     setupToggle(btMostrar2, btOcultar2, detInfo2);
 });
+
+function irAProyectos(){
+    document.getElementById("hacer").scrollIntoView({ behavior: "smooth" });
+}
+
+function irAContacto(){
+    document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+}
+
+function enviarCont() {
+    let nombre = document.getElementById("nombre").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mensaje = document.getElementById("mensaje").value.trim();
+
+    if (nombre === "" || email === "" || mensaje === "") {
+        alert("Todos los campos son obligatorios.");
+        return false;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Por favor, ingresa un correo electrónico válido.");
+        return false;
+    }
+    alert("Hola " + nombre+ ".\nHe recibido tu mensaje:\n" + mensaje + "\nPronto me pondré en contacto contigo al correo:\n" + email)
+    return true;
+}

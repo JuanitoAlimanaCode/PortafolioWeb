@@ -22,8 +22,8 @@
                         soluciones funcionales y atractivas. Estoy desarrollando habilidades tanto en el diseño
                         del front-end como en la lógica del back-end, con el objetivo de construir aplicaciones
                         que ofrezcan experiencias excepcionales a los usuarios.<br><br>
-                        <button href="#trabajos" class="proyectos">Ver Proyectos</button>
-                        <button class="contacto">Contáctame</button>
+                        <button class="proyectos" onclick="irAProyectos()">Ver Proyectos</button>
+                        <button class="contacto" onclick="irAContacto()"></button>>Contáctame</button>
 			</div>
 		</div>
 	</div>
@@ -470,7 +470,8 @@
 						</div>
 					</div>
 					<div class="form-contacto">
-						<form name="MyForm" method="post">
+						<form name="MyForm" method="POST" action="mailto:jcamilo3003@gmail.com"
+							enctype="multipart/form-data" onsubmit="return enviarCont()">
 							<div class="form_1">
 								<div class="grupo">
 									<textarea id="nombre" rows="1" required></textarea>
