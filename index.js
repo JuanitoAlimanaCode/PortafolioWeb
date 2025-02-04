@@ -48,5 +48,6 @@ function enviarCont() {
         return false;
     }
     alert("Hola " + nombre+ ".\nHe recibido tu mensaje:\n" + mensaje + "\nPronto me pondré en contacto contigo al correo:\n" + email)
+    document.getElementById("contactForm").submit();
     return true;
 }

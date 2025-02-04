@@ -470,27 +470,26 @@
 						</div>
 					</div>
 					<div class="form-contacto">
-						<form name="MyForm" method="POST" action="mailto:jcamilo3003@gmail.com"
-							enctype="multipart/form-data" onsubmit="return enviarCont()">
+						<form name="MyForm" id="contactForm" action="https://formspree.io/f/mgvoybnr" method="POST">
 							<div class="form_1">
 								<div class="grupo">
-									<textarea id="nombre" rows="1" required></textarea>
+									<textarea id="nombre" name="nombre" rows="1" required></textarea>
 									<span class="barra"></span>
 									<label class="etiquetas">Nombre</label>
 								</div>
 								<div class="grupo">
-									<textarea id="email" rows="1"  required></textarea>
+									<textarea id="email" name="email" rows="1" required></textarea>
 									<span class="barra"></span>
 									<label class="etiquetas">Email</label>
 								</div>
 							</div>
 							<div class="form_2">
 								<div class="grupo">
-									<textarea id="mensaje" rows="5" required></textarea>
+									<textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 									<span class="barra"></span>
 									<label class="etiquetas">Mensaje</label>
 								</div>
-								<button class="enviar" type="submit">Contactar</button>
+								<button class="enviar" type="button" onclick="enviarCont()">Contactar</button>
 							</div>
 						</form>
 					</div>
