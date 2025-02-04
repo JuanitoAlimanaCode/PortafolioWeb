@@ -51,3 +51,29 @@ function enviarCont() {
     document.getElementById("contactForm").submit();
     return true;
 }
+
+function obtenerUsuarios() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => mostrarUsuarios(data))  
+        .catch(error => console.error('Error al obtener los datos:', error));  
+}
+
+
+function mostrarUsuarios(usuarios) {
+    const contenedor = document.getElementById('usuarios');  
+
+    usuarios.forEach(usuario => {
+        const usuarioElement = document.createElement('div');
+        usuarioElement.classList.add('usuario');
+
+        usuarioElement.innerHTML = `
+            <h3>${usuario.name}</h3>
+            <p>Email: ${usuario.email}</p>
+            <p>Teléfono: ${usuario.phone}</p>
+            <p>Dirección: ${usuario.address.street}, ${usuario.address.city}</p>
+        `;
+
+        contenedor.appendChild(usuarioElement);
+    });
+}
