@@ -1,3 +1,9 @@
+window.onload = function() {
+    cargarUsuarios();
+};
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const btMostrar1 = document.getElementById("btMostrar1");
     const btOcultar1 = document.getElementById("btOcultar1");
@@ -52,28 +58,33 @@ function enviarCont() {
     return true;
 }
 
-function obtenerUsuarios() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+function cargarUsuarios() {
+    fetch("https://jsonplaceholder.org/users")  
         .then(response => response.json())
-        .then(data => mostrarUsuarios(data))  
-        .catch(error => console.error('Error al obtener los datos:', error));  
+        .then(data => mostrarUsuarios(data))
+        .catch(error => console.error('Error al cargar los usuarios:', error));
 }
 
-
 function mostrarUsuarios(usuarios) {
-    const contenedor = document.getElementById('usuarios');  
+    let header = document.querySelector(".header");
+    let i = 0;
 
-    usuarios.forEach(usuario => {
-        const usuarioElement = document.createElement('div');
-        usuarioElement.classList.add('usuario');
+    let mensajeUsuarios = "Usuarios Contactados: ";
 
-        usuarioElement.innerHTML = `
-            <h3>${usuario.name}</h3>
-            <p>Email: ${usuario.email}</p>
-            <p>Teléfono: ${usuario.phone}</p>
-            <p>Dirección: ${usuario.address.street}, ${usuario.address.city}</p>
-        `;
+    let interval = setInterval(() => {
+        
+        let usuarioActual = `${usuarios[i].firstname} ${usuarios[i].lastname} - 
+        email: ${usuarios[i].email} - 
+        Fecha de Nacimiento: ${usuarios[i].birthDate} - 
+        Dirección: ${usuarios[i].address.street}, ${usuarios[i].address.suite}, ${usuarios[i].address.city} - 
+        Teléfono: ${usuarios[i].phone}`;
 
-        contenedor.appendChild(usuarioElement);
-    });
+        header.innerHTML = mensajeUsuarios + usuarioActual;
+
+        i++;
+
+        if (i >= usuarios.length) {
+            clearInterval(interval);
+        }
+    }, 3000);  
 }
