@@ -1186,6 +1186,17 @@ textarea:focus~.barra::before{
     height:350px;
 }
 
+.social img {
+    align: middle;
+    margin-right: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out; 
+}
+
+.social img:hover {
+    filter: grayscale(0%); 
+}
+
 .enlaces a, .social a {
     color: #fff;
     text-decoration: none;
