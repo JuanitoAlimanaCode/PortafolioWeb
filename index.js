@@ -43,6 +43,12 @@ function enviarCont() {
     let nombre = document.getElementById("nombre").value.trim();
     let email = document.getElementById("email").value.trim();
     let mensaje = document.getElementById("mensaje").value.trim();
+    
+    let regexNombre = /^[a-zA-Z\s]*$/;
+    if (!regexNombre.test(nombre)) {
+        alert("El nombre solo puede contener letras y espacios.");
+        return false; 
+    }
 
     if (nombre === "" || email === "" || mensaje === "") {
         alert("Todos los campos son obligatorios.");
@@ -53,7 +59,8 @@ function enviarCont() {
         alert("Por favor, ingresa un correo electrónico válido.");
         return false;
     }
-    alert("Hola " + nombre+ ".\nHe recibido tu mensaje:\n" + mensaje + "\nPronto me pondré en contacto contigo al correo:\n" + email)
+
+    alert("Hola " + nombre + ".\nHe recibido tu mensaje:\n" + mensaje + "\nPronto me pondré en contacto contigo al correo:\n" + email);
     document.getElementById("contactForm").submit();
     return true;
 }
