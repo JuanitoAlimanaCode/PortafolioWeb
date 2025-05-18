@@ -72,8 +72,8 @@
 
 .right .resumen{
     flex:0 0 70%;
-    padding: 20px;
-    font-size: x-large;
+    padding: 0px;
+    font-size: medium;
     color: #f2f2f2;
 }
 
