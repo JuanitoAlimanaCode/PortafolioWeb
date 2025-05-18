@@ -401,37 +401,37 @@
 }
 
 #html-menu{animation: html-bar 5s forwards;}
-@keyframes html-bar{100%{width: 70%;}}
+@keyframes html-bar{100%{width: 100%;}}
 
 #css-menu{animation: css-bar 5s forwards;}
-@keyframes css-bar{100%{width: 40%;}}
+@keyframes css-bar{100%{width: 100%;}}
 
 #js-menu{animation: js-bar 5s forwards;}
-@keyframes js-bar{100%{width: 15%;}}
+@keyframes js-bar{100%{width: 80%;}}
 
 #python-menu{animation: python-bar 5s forwards;}
-@keyframes python-bar{100%{width: 10%;}}
+@keyframes python-bar{100%{width: 80%;}}
 
 #react-menu{animation: react-bar 5s forwards;}
-@keyframes react-bar{100%{width: 1%;}}
+@keyframes react-bar{100%{width: 100%;}}
 
 #angular-menu{animation: angular-bar 5s forwards;}
-@keyframes angular-bar{100%{width: 1%;}}
+@keyframes angular-bar{100%{width: 50%;}}
 
 #node-menu{animation: node-bar 5s forwards;}
-@keyframes node-bar{100%{width: 1%;}}
+@keyframes node-bar{100%{width: 50%;}}
 
 #django-menu{animation: django-bar 5s forwards;}
-@keyframes django-bar{100%{width: 1%;}}
+@keyframes django-bar{100%{width: 100%;}}
 
 #mysql-menu{animation: mysql-bar 5s forwards;}
-@keyframes mysql-bar{100%{width: 60%;}}
+@keyframes mysql-bar{100%{width: 80%;}}
 
 #postgre-menu{animation: postgre-bar 5s forwards;}
-@keyframes postgre-bar{100%{width: 30%;}}
+@keyframes postgre-bar{100%{width: 80%;}}
 
 #mongo-menu{animation: mongo-bar 5s forwards;}
-@keyframes mongo-bar{100%{width: 10%;}}
+@keyframes mongo-bar{100%{width: 80%;}}
 
 .mod-four {
     display: flex;
